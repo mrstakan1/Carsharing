@@ -1,0 +1,16 @@
+<div th:fragment="card">
+    <div class="card">
+        <div class="">
+            <h1 th:text="${el.name}"/>
+            <p>Марка: <span th:text="${el.mark}"/></p>
+            <p>Описание: <span th:text="${el.description}"/></p>
+        </div>
+        <div class="">
+            <p>Цена: <span class="" th:text="${el.price}"/> Руб</p>
+            <form id="catalog" class="" action="catalog" method="get">
+                <input id="1" type="text" name="orderName" class="" th:value="${el.name}">
+                <button id="order_button" type="submit" class="btn btn-primary">Забронировать</button>
+            </form>
+        </div>
+    </div>
+</div>

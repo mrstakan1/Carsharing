@@ -1,0 +1,14 @@
+<div th:fragment="car" class="car">
+    <div class="">
+        <h1 th:text="${el.name}" />
+        <p>Марка: <span th:text="${el.mark}"/></p>
+        <p>Описание: <span th:text="${el.description}"/></p>
+        <p>Цена: <span class="" th:text="${el.price}"/> Руб</p>
+    </div>
+    <div class="product-removal">
+        <form id="del_form">
+            <input type="text" name="delName" th:value="${el.name}">
+            <button type="submit" class="btn btn-primary">Разбронировать</button>
+        </form>
+    </div>
+</div>

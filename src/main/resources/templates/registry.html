@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="ru" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <title>Регистрация</title>
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+
+        .cover-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            padding: 3rem;
+        }
+
+        .inner {
+            text-align: center;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        button {
+            margin-top: 15px;
+            margin-bottom: 15px;
+            transition: all 0.3s ease;
+        }
+
+        button:hover {
+            transform: scale(1.05);
+        }
+
+        label {
+            margin-top: 10px;
+            display: block;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            margin-bottom: 10px;
+            border: 1px solid #ced4da;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        input[type="password"]:focus {
+            outline: none;
+            border-color: #4dabf7;
+            box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+        }
+    </style>
+</head>
+<body>
+<div class="cover-container">
+    <main role="main" class="inner">
+        <form id="registration">
+            <label for="example">Имя</label>
+            <input name="name" type="text" class="form-control" id="example" placeholder="Имя">
+            <label for="exampleInputEmail1">Адрес электронной почты</label>
+            <input name="email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Введите адрес электронной почты">
+            <label for="exampleInputPassword1">Пароль</label>
+            <input name="password" type="password" class="form-control" id="exampleInputPassword1" placeholder="Пароль">
+            <button type="submit" class="btn btn-primary">Зарегистрироваться</button>
+        </form>
+        <script src="/js/registry.js"></script>
+    </main>
+</div>
+</body>
+</html>
